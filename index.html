@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sumaho Dolly — スマホが Blender の手持ちカメラになる</title>
+<meta name="description" content="iPhone を手持ちカメラのように動かすと、パソコンの Blender のカメラが同じように動き、その動きを記録できるアプリです。">
+<link rel="icon" href="img/favicon.png">
+<link rel="alternate" hreflang="en" href="en/">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="img/icon.png" alt="">Sumaho Dolly</a>
+    <nav>
+      <a href="#video">動画</a>
+      <a href="#setup">はじめかた</a>
+      <a href="privacy.html">プライバシー</a>
+      <a href="en/" hreflang="en" lang="en">English</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <img class="icon" src="img/icon.png" alt="Sumaho Dolly のアイコン">
+    <h1>Sumaho Dolly</h1>
+    <p class="lead">iPhone を手持ちカメラのように動かすと、パソコンの Blender のカメラが同じように動きます。手で撮ったカメラワークを、そのまま 3DCG に。</p>
+    <div class="buttons">
+      <a class="btn primary disabled" href="#" aria-disabled="true">App Store（準備中）</a>
+      <a class="btn secondary" href="download/sumaho_dolly-0.10.0.zip" download>アドオンをダウンロード（無料）</a>
+    </div>
+    <p class="note">アドオン 0.10.0 ・ Blender 4.2 以降（Mac / Windows）</p>
+  </div>
+
+  <section id="video">
+    <h2>使っているところ</h2>
+    <!-- 動画ができたら、下の div.video の中身を YouTube の埋め込みに置きかえる（CLAUDE.md の「公式ページ」参照） -->
+    <div class="video">
+      <div class="video-placeholder"><span>▶</span><p>使い方の動画は準備中です</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>できること</h2>
+    <div class="features">
+      <div class="card"><h3>振るとカメラが動く</h3><p>iPhone の向きと位置で、Blender のカメラをその場で動かします（1 秒に 60 回）。</p></div>
+      <div class="card"><h3>縮尺</h3><p>iPhone を 1m 動かしたとき、カメラを何 m 動かすかを 0.1〜10 倍で。小さな模型も、広い街も。</p></div>
+      <div class="card"><h3>揺れを和らげる</h3><p>手の細かい揺れを、好みの強さで抑えます。</p></div>
+      <div class="card"><h3>カメラ画面</h3><p>Blender のカメラから見た画面を iPhone に映して、見ながら撮れます。iPhone のカメラ映像も透かして重ねられます。</p></div>
+      <div class="card"><h3>記録<span class="tag">購入が必要</span></h3><p>タイムラインを再生しながら、カメラの動きをテイクとして Blender に残します。何回でも、長さの制限なし。</p></div>
+      <div class="card"><h3>iPhone から操作</h3><p>基準合わせ、テイクの見返し・選択・削除、Blender のファイルの保存まで、iPhone から。</p></div>
+    </div>
+  </section>
+
+  <section id="setup">
+    <h2>はじめかた</h2>
+    <ol class="steps">
+      <li><strong>アプリを入れる</strong>App Store から Sumaho Dolly を入れます（準備中）。</li>
+      <li><strong>アドオンを入れる</strong>上の「アドオンをダウンロード」で zip ファイルを保存し、Blender の画面にドラッグ＆ドロップします。<br>うまくいかないときは「編集 → プリファレンス → アドオン」の右上「∨」→「ディスクからインストール…」で zip を選びます。</li>
+      <li><strong>受信を始める</strong>Blender の 3D ビューで <kbd>N</kbd> キーを押し、右に出る「Sumaho Dolly」タブで「受信を始める」を押します。</li>
+      <li><strong>つなぐ</strong>iPhone とパソコンを同じ Wi-Fi につなぎ、タブに出ている「この PC の IP」をアプリに入れて「送信を始める」を押します。</li>
+      <li><strong>動かす</strong>iPhone を横向きに持ち（上側を左）、ゆっくり動かしてみてください。</li>
+    </ol>
+    <p class="note">Windows では、初めて「受信を始める」を押したときにファイアウォールの確認が出たら「プライベートネットワーク」を許可してください。</p>
+  </section>
+
+  <section>
+    <h2>使うもの</h2>
+    <dl class="req">
+      <dt>iPhone</dt><dd>ARKit に対応した iPhone</dd>
+      <dt>パソコン</dt><dd>Blender 4.2 以降が動く Mac または Windows</dd>
+      <dt>ネットワーク</dt><dd>iPhone とパソコンを同じ Wi-Fi（同じネットワーク）に</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>値段</h2>
+    <div class="price">
+      <p><strong>カメラを動かすのは無料です。</strong></p>
+      <p>記録は、アプリの中で一度買えばずっと使える買い切りです。月額はありません。同じ Apple アカウントの iPhone なら買い直しは不要です。</p>
+      <p>Blender のアドオンは無料・オープンソース（GPL）です。</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>お問い合わせ</h2>
+    <p>ご質問・不具合のご連絡は、メールでお送りください。<br><a href="mailto:akihide.cg.from@gmail.com">akihide.cg.from@gmail.com</a></p>
+    <p class="note">お使いの iPhone の機種、Blender の版、Mac か Windows か を書いていただけると助かります。</p>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p class="links"><a href="privacy.html">プライバシーポリシー</a><a href="#contact">お問い合わせ</a><a href="en/" hreflang="en" lang="en">English</a></p>
+    <p>© 2026 CG.From</p>
+    <p>Blender は Blender Foundation の登録商標です。Sumaho Dolly は Blender Foundation とは関係のない、個人が作ったアプリです。iPhone は Apple Inc. の商標です。</p>
+  </div>
+</footer>
+</body>
+</html>

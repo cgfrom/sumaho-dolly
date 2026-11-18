@@ -1,0 +1,111 @@
+/* Sumaho Dolly 公式ページ（GitHub Pages）。色はアプリのアイコン（オレンジ）に合わせる。 */
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f6f4f1;
+  --text: #1d1d1f;
+  --text-soft: #5f5f66;
+  --line: #e4e1dc;
+  --accent: #e8622c;
+  --accent-text: #ffffff;
+  --radius: 18px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141416;
+    --bg-soft: #1e1e22;
+    --text: #f2f2f4;
+    --text-soft: #a8a8b0;
+    --line: #2e2e34;
+    --accent: #ff8a4a;
+    --accent-text: #141416;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Segoe UI", Meiryo, sans-serif;
+  line-height: 1.75;
+}
+a { color: var(--accent); }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+header.top {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 0;
+}
+header.top .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; }
+header.top .brand img { width: 32px; height: 32px; border-radius: 8px; }
+header.top nav a { margin-left: 16px; color: var(--text-soft); text-decoration: none; font-size: 0.95rem; }
+header.top nav a:hover { color: var(--text); }
+
+.hero { text-align: center; padding: 48px 0 40px; }
+.hero img.icon { width: 128px; height: 128px; border-radius: 28px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+.hero h1 { font-size: clamp(2rem, 6vw, 3rem); margin: 20px 0 8px; letter-spacing: 0.01em; }
+.hero p.lead { font-size: 1.15rem; color: var(--text-soft); margin: 0 auto 28px; max-width: 34em; }
+.buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-block; padding: 12px 22px; border-radius: 999px;
+  font-weight: 700; text-decoration: none; border: 2px solid var(--accent);
+}
+.btn.primary { background: var(--accent); color: var(--accent-text); }
+.btn.secondary { color: var(--accent); background: transparent; }
+.btn.disabled { opacity: 0.55; pointer-events: none; }
+.note { font-size: 0.85rem; color: var(--text-soft); margin-top: 10px; }
+
+section { padding: 40px 0; border-top: 1px solid var(--line); }
+section h2 { font-size: 1.5rem; margin: 0 0 20px; }
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.card { background: var(--bg-soft); border-radius: var(--radius); padding: 20px; }
+.card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+.card p { margin: 0; color: var(--text-soft); font-size: 0.95rem; }
+.card .tag { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--accent); margin-left: 6px; }
+
+ol.steps { list-style: none; padding: 0; margin: 0; counter-reset: step; }
+ol.steps li { counter-increment: step; position: relative; padding: 0 0 18px 48px; }
+ol.steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: 0;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--accent); color: var(--accent-text);
+  font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+ol.steps strong { display: block; }
+kbd { font-family: inherit; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; padding: 0 6px; background: var(--bg-soft); }
+
+dl.req { display: grid; grid-template-columns: max-content 1fr; gap: 6px 20px; margin: 0; }
+dl.req dt { font-weight: 700; }
+dl.req dd { margin: 0; color: var(--text-soft); }
+
+.price { background: var(--bg-soft); border-radius: var(--radius); padding: 20px 24px; }
+.price p { margin: 4px 0; }
+
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; font-size: 0.85rem; color: var(--text-soft); }
+footer a { color: var(--text-soft); }
+footer .links a { margin-right: 16px; }
+
+/* プライバシーポリシーなど、文章だけのページ */
+article.doc { padding: 24px 0 40px; }
+article.doc h1 { font-size: 1.8rem; margin: 16px 0 4px; }
+article.doc .updated { color: var(--text-soft); margin: 0 0 24px; }
+article.doc h2 { font-size: 1.1rem; margin: 28px 0 6px; }
+article.doc p { margin: 0 0 12px; }
+
+/* 使い方の動画（16:9）。YouTube の埋め込み（iframe）か、準備中の表示を入れる */
+.video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--radius); overflow: hidden; background: var(--bg-soft); }
+.video iframe, .video video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--text-soft); }
+.video-placeholder span { width: 64px; height: 64px; border-radius: 50%; background: var(--accent); color: var(--accent-text); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; padding-left: 4px; opacity: 0.6; }
+.video-placeholder p { margin: 12px 0 0; }
+
+header.top .brand, header.top nav a { white-space: nowrap; }
+header.top nav { display: flex; flex-wrap: nowrap; }
+@media (max-width: 560px) {
+  header.top nav a { margin-left: 12px; font-size: 0.9rem; }
+  header.top nav a[href="#setup"], header.top nav a[href="#video"] { display: none; }
+  dl.req { grid-template-columns: 1fr; }
+  dl.req dd { margin-bottom: 8px; }
+}
